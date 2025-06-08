@@ -74,28 +74,50 @@
 	  </div>
 	  <div class="w3-center">
 	    <!-- <h3>[<a href="https://github.com/aharley/pips">Code</a>] &emsp; [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Harley_Track_Check_Repeat_An_EM_Approach_to_Unsupervised_Tracking_CVPR_2021_paper.pdf">Paper</a>]</h3> -->
-	    <h3>[<a href="https://arxiv.org/abs/2204.04153">Paper</a>] &emsp; [<a href="https://github.com/aharley/pips">Code</a>] &emsp; [<a href="https://blog.ml.cmu.edu/2022/09/09/tracking-any-pixel-in-a-video/">Blog</a>]</h3>
+	    <h3>[<a href="https://arxiv.org/abs/2204.04153">Paper</a>] &emsp; [<a href="https://github.com/aharley/alltracker">Code</a>]</h3>
 	  </div>
 	  <hr>
 
-          <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;"> -->
-	  <!--   <tr style="padding:0px"> -->
-	  <!--     <td style="padding-right:0%;width:100%;vertical-align:middle"> -->
-	  <!-- 	<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true"> -->
-	  <!-- 	  <source src="videos/horse_dense_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos. -->
-	  <!-- 	</video> -->
-	  <!--     </td> -->
-	  <!--   </tr> -->
-	    <!-- </table> -->
-
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;">
+	    <tr style="padding:0px">
+	      <td style="padding-right:0%;width:100%;vertical-align:middle">
+		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
+		  <source src="videos/172_rate4_20.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
+		</video>
+	      </td>
+	    </tr>
+	  </table>
+	  <hr>
+	  <div class="w3-center">
+	    <h3>Overview</h3>
+	  </div>
+	  <p>
+	    We introduce AllTracker: a model that estimates long-range point tracks by
+	    way of estimating the flow field between a query frame and every other frame of
+	    a video. Unlike existing point tracking methods, our approach delivers
+	    high-resolution and dense (all-pixel) correspondence fields, which can be
+	    visualized as flow maps. Unlike existing optical flow methods, our approach
+	    corresponds one frame to hundreds of subsequent frames, rather than just the
+	    next frame. We develop a new architecture for this task, blending techniques
+	    from existing work in optical flow and point tracking: the model performs
+	    iterative inference on low-resolution grids of correspondence estimates,
+	    propagating information spatially via 2D convolution layers, and propagating
+	    information temporally via pixel-aligned attention layers. The model is fast
+	    and parameter-efficient (16 million parameters), and delivers state-of-the-art
+	    point tracking accuracy at high resolution (i.e., tracking 768x1024 pixels, on
+	    a 40G GPU). A benefit of our design is that we can train on a wider set of
+	    datasets, and we find that doing so is crucial for top performance. We provide
+	    an extensive ablation study on our architecture details and training recipe,
+	    making it clear which details matter most. Our code and model weights are
+	    available.
+	  </p>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:0px;">
 	    <tr style="padding:0px">
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
 		<!-- <div align="center">DINO</div> -->
 		<!-- <img style="width:100%;max-width:100%" alt="" src="images/camel_mask.gif"> -->
-
 		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/camel_mask_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
+		  <source src="videos/212_rate4_30.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
 		</video>
 		
 	      </td>
@@ -103,57 +125,23 @@
 		<!-- <div align="center">RAFT</div> -->
 		<!-- <img style="width:100%;max-width:100%" alt="" src="images/fish_mask.gif"> -->
 		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/fish_mask_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
+		  <source src="videos/monkey_rate4_30.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
 		</video>
 		
 	      </td>
 	      <td style="padding-right:1%;width:32%;vertical-align:middle">
 		<!-- <img style="width:100%;max-width:100%" alt="" src="images/dancer_mask.gif"> -->
 		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/dancer_mask_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
+		  <source src="videos/211_rate4_30.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
 		</video>
 		
 	      </td>
 	    </tr>
 	  </table>
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:10px;">
-	    <tr style="padding:0px">
-	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<!-- <div align="center">DINO</div> -->
-		<!-- <img style="width:100%;max-width:100%" alt="" src="images/horse_dense.gif"> -->
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/horse_dense_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-		
-	      </td>
-	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<!-- <div align="center">RAFT</div> -->
-		<!-- <img style="width:100%;max-width:100%" alt="" src="images/judo_dense.gif"> -->
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/judo_dense_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-	      </td>
-	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<!-- <img style="width:100%;max-width:100%" alt="" src="images/duck_dense.gif"> -->
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/duck_dense_loop.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-	      </td>
-	    </tr>
-	  </table>
+	  <hr>
+	  
 	  
 
-	  
-	  <!-- <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center"> -->
-	  <!--   <img src="images/fig1.png" style="width:100%"> -->
-	  <!-- </div> -->
-	  <hr>
-	  <div class="w3-center">
-	    <h2>Abstract</h2>
-	  </div>
-	  <p>Tracking pixels in videos is typically studied as an optical flow estimation problem, where every pixel is described with a displacement vector that locates it in the next frame. Even though wider temporal context is freely available, prior efforts to take this into account have yielded only small gains over 2-frame methods. In this paper, we revisit Sand and Teller's "particle video" approach, and study pixel tracking as a long-range motion estimation problem, where every pixel is described with a trajectory that locates it in multiple future frames. We re-build this classic approach using components that drive the current state-of-the-art in flow and object tracking, such as dense cost maps, iterative optimization, and learned appearance updates. We train our models using long-range amodal point trajectories mined from existing optical flow data that we synthetically augment with multi-frame occlusions. We test our approach in trajectory estimation benchmarks and in keypoint label propagation tasks, and compare favorably against state-of-the-art optical flow and feature tracking methods.</p>
-	  <hr>
 
 	  <!--
 	  <div class="w3-center">
@@ -166,29 +154,22 @@
 	  -->
 
 	  <div class="w3-center">
-	    <h2>Demo</h2>
+	    <h3>Native high-resolution dense tracking</h3>
 	  </div>
-	  <p><strong>Goal</strong>: Given a target pixel specified on the first frame, track that pixel across the whole video.</p>
-	  <!-- <p>Unlike feature-matching or flow-based methods, particle trajectories can track objects during and through occlusions.</p> -->
+	  <p>Existing point trackers either operate only at low resolution or track only sparse points. We track every pixel, and only subsample our output for the purpose of clear visualization.</p>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 	    <tr style="padding:0px">
-	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<div align="center">DINO</div>
+	      <td style="padding-right:1%;width:24%;vertical-align:middle">
+		<div align="center">No subsampling</div>
 	      </td>
-	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<div align="center">RAFT</div>
+	      <td style="padding-right:1%;width:24%;vertical-align:middle">
+		<div align="center">Subsampling rate 2</div>
 	      </td>
-	      <td style="padding-right:1%;width:32%;vertical-align:middle">
-		<div align="center">PIPs (ours)</div>
+	      <td style="padding-right:1%;width:24%;vertical-align:middle">
+		<div align="center">Subsampling rate 4</div>
 	      </td>
-	    </tr>
-	  </table>
-	  <table>
-	    <tr style="padding:0px">
-	      <td style="width:100%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/horse_all.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
+	      <td style="padding-right:1%;width:24%;vertical-align:middle">
+		<div align="center">Subsampling rate 8</div>
 	      </td>
 	    </tr>
 	  </table>
@@ -196,74 +177,96 @@
 	    <tr style="padding:0px">
 	      <td style="width:100%;vertical-align:middle">
 		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/camel_all.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
+		  <source src="videos/167_stack.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
 		</video>
 	      </td>
 	    </tr>
 	  </table>
-	  <table>
-	    <tr style="padding:0px">
-	      <td style="width:100%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/dog_all.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-	      </td>
-	    </tr>
-	  </table>
-	  <table>
-	    <tr style="padding:0px">
-	      <td style="width:100%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/horse2_all.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-	      </td>
-	    </tr>
-	  </table>
+	  <!-- <p>Our method works even at resolutions like 768x1024 (>700k points). Our experiments show that higher resolutions yield better performance for AllTracker, which is not true for all baselines. </p> -->
+	  <p>Most point trackers operate at either 256x256 or 384x512, and run out of memory at higher resolutions. Our method scales to 768x1024 on a 40G GPU, and our accuracy reliably gets better at higher resolutions.</p>
+	  <hr>
 
-	  <!-- <p>Our model is trained once, on a large synthetic dataset.</p>n  -->
-	  <p>We call our method <strong>Persistent Independent Particles</strong>, because we treat each pixel as if it is a particle with a long-range trajectory, and we track each particle <em>independently</em>. Some computation is shared between particles, which makes inference fast, but each particle produces its own trajectory, without inspecting the trajectories of its neighbors. A side-effect of this is that we may compute particle trajectories for any given subset of pixels. For the visualization below, we computed particles at three grids of different densities.</p>
-	  <table>
-	    <tr style="padding:0px">
-	      <td style="width:100%;vertical-align:middle">
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/pup_vstack.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-	      </td>
-	    </tr>
-	  </table>
+	  <!-- <div class="w3-center"> -->
+	  <!--   <h3>State-of-the-art accuracy</h3> -->
+	  <!-- </div> -->
+	  <!-- We evaluate on a total of nine publicly-available benchmarks with point annotations, covering a wide set of domains -->
+	  <!-- that include animals, YouTube -->
+	  <!-- videos, -->
+	  <!-- surveillance camera recordings, egocentric recordings, and robotics data. -->
+	  <!-- AllTracker outperforms all other models on average, with the -->
+	  <!-- closest competitor being CoTracker3, which relies on a much more expensive training setup (real-video bootstrapping).  -->
+	  <!-- <table> -->
+	  <!--   <tr style="padding:0px"> -->
+	  <!--     <td style="width:100%;vertical-align:middle"> -->
+	  <!-- 	<img src="images/table1.png" style="width:100%"> -->
+	  <!--     </td> -->
+	  <!--   </tr> -->
+	  <!-- </table> -->
+	  <!-- <hr> -->
 
 	  
-	  <p>Our method initializes a zero-velocity trajectory (copying the initial position across time), and then iteratively refines the trajectory, using local appearance costs, and a learned trajectory prior. Since it reasons over multiple timesteps simultaneously, it "catch" a target after it re-emerges from an occluder, and inpaint the missing part of the trajectory.</p>
-	  <table>
-	    <tr style="padding:0px">
-	      <td style="width:100%;vertical-align:middle">
-		<!-- <img src="images/iterative_updates2.gif" style="width:100%"> -->
-		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
-		  <source src="videos/iterative_updates2.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
-		</video>
-		
-	      </td>
-	    </tr>
-	  </table>
-
+	  <!-- <div class="w3-center"> -->
+	  <!--   <h3>Accuracy scales with resolution</h3> -->
+	  <!-- </div> -->
+	  <!-- Most point trackers operate at either 256x256 or 384x512, and run out of memory at higher resolutions. Our method scales to 768x1024 on a 40G GPU, and our accuracy reliably gets better at higher resolutions. -->
+	  <!-- <table> -->
+	  <!--   <tr style="padding:0px"> -->
+	  <!--     <td style="width:100%;vertical-align:middle"> -->
+	  <!-- 	<img src="images/table2.png" style="width:100%"> -->
+	  <!--     </td> -->
+	  <!--   </tr> -->
+	  <!-- </table> -->
 	  
 	  <!-- <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center"> -->
 	  <!--   <iframe width="800" height="600" src="https://www.youtube.com/embed/Jg2f5fkgxZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 	  <!-- </div> -->
+	  <!-- <hr> -->
+
+	  <div class="w3-center">
+	    <h3>Works by estimating flow, visibility, and confidence, in sliding window</h3>
+	  </div>
+	  <p>AllTracker works by estimating optical flow between a "query frame" and every other frame of a video, using a sliding-window strategy. We also output visibility and confidence. In relation to other optical flow models, the key novelty of our approach is that we solve a <em>window</em> of flow problems simultaneously, instead of frame-by-frame; the information shared within and across windows unlocks the capability to resolve flows across wide time intervals.</p>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+	    <tr style="padding:0px">
+	      <td style="padding-right:1%;width:24%;vertical-align:middle">
+		<div align="center">Input video</div>
+	      </td>
+	      <td style="padding-right:1%;width:24%;vertical-align:middle">
+		<div align="center">Optical flow</div>
+	      </td>
+	      <td style="padding-right:1%;width:24%;vertical-align:middle">
+		<div align="center">Visibility</div>
+	      </td>
+	      <td style="padding-right:1%;width:24%;vertical-align:middle">
+		<div align="center">Confidence</div>
+	      </td>
+	    </tr>
+	  </table>
+	  <table>
+	    <tr style="padding:0px">
+	      <td style="width:100%;vertical-align:middle">
+		<video controls style="width:100%;max-width:100%" autoplay="true" loop="true" playsinline="true" muted="true">
+		  <source src="videos/000_stack.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
+		</video>
+	      </td>
+	    </tr>
+	  </table>
 	  <hr>
+	  
+	  
 	  
 
 	  <div class="w3-row w3-margin" style="padding-bottom:2em">
 	    <div class="w3-center"><h2>Paper</h2></div>
 	    <div class="w3-col s0 m1 l2" style="height:10px"></div>
 	    <div class="w3-col s6 m3 l2">
-	      <a href="https://arxiv.org/abs/2204.04153"><img class="layered-paper-big" src="images/page.png" style="width:100%;min-height:200px; margin-right:3em"></a>
+	      <a href="https://arxiv.org/abs/2204.04153"><img class="layered-paper-big" src="images/alltracker_paperimage.png" style="width:100%;min-height:200px; margin-right:3em"></a>
 	    </div>
 	    <div class="w3-col s6 m7 l6" style="padding-left:5em">
 	      <div class="cite">
-		Adam W. Harley, Zhaoyuan Fang, and Katerina Fragkiadaki.
-		<i>Particle Video Revisited: Tracking Through Occlusions Using Point Trajectories.</i> 
-		ECCV 2022.
+		Adam W. Harley, Yang You, Xinglong Sun, Yang Zheng, Nikhil Raghuraman, Yunqi Gu, Sheldon Liang, Wen-Hsuan Chu, Achal Dave, Pavel Tokmakov, Suya You, Rares Ambrus, Katerina Fragkiadaki, Leonidas J. Guibas.
+		<i>AllTracker: Efficient Dense Point Tracking at High Resolution.</i>
+		arXiv 2025.
 	      </div>
 	      <h3><a href="https://arxiv.org/pdf/2204.04153.pdf">[pdf]</a>&emsp;<a href="bib.txt">[bibtex]</a></h3>
 	    </div>

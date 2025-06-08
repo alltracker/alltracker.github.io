@@ -1,0 +1,6 @@
+@inproceedings{harley2025alltracker,
+author    = {Adam W. Harley and Yang You and Xinglong Sun and Yang Zheng and Nikhil Raghuraman and Yunqi Gu and Sheldon Liang and Wen-Hsuan Chu and Achal Dave and Pavel Tokmakov and Suya You and Rares Ambrus and Katerina Fragkiadaki and Leonidas J. Guibas},
+title     = {All{T}racker: {E}fficient Dense Point Tracking at High Resolution}
+booktitle = {arXiv},
+year      = {2025}
+}
